@@ -4,9 +4,9 @@ import java.util.ArrayDeque;
 
 import i.gishreloaded.gishcode.hack.Hack;
 import i.gishreloaded.gishcode.hack.HackCategory;
-import i.gishreloaded.gishcode.utils.Utils;
-import i.gishreloaded.gishcode.utils.visual.ChatUtils;
-import i.gishreloaded.gishcode.utils.visual.RenderUtils;
+    import i.gishreloaded.gishcode.utils.Utils;
+    import i.gishreloaded.gishcode.utils.visual.ChatUtils;
+    import i.gishreloaded.gishcode.utils.visual.RenderUtils;
 import i.gishreloaded.gishcode.wrappers.Wrapper;
 import net.minecraft.block.BlockChest;
 import net.minecraft.entity.Entity;
@@ -15,12 +15,13 @@ import net.minecraft.inventory.Container;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityChest;
 import net.minecraft.tileentity.TileEntityEnderChest;
+import net.minecraft.tileentity.TileEntityShulkerBox;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.client.event.RenderWorldLastEvent;
 
 public class ChestESP extends Hack{
 
-	private int maxChests = 1000;
+	private int maxChests = 1000;	
 	public boolean shouldInform = true;
 	private TileEntityChest openChest;
 	private ArrayDeque<TileEntityChest> emptyChests = new ArrayDeque<TileEntityChest>();
@@ -38,12 +39,12 @@ public class ChestESP extends Hack{
 	private boolean shouldRenderIronChest = true;
 	
 	public ChestESP() {
-		super("ChestESP", HackCategory.VISUAL);
+		super("StorageESP", HackCategory.VISUAL);
 	}
 	
 	@Override
     public String getDescription() {
-        return "Allows you to see all of the chests around you.";
+        return "Tüm depolama araçlarını görmeni sağlar.";
     }
 	
 	@Override
@@ -70,31 +71,37 @@ public class ChestESP extends Hack{
 				boolean trapped = chest.getChestType() == BlockChest.Type.TRAP;
 				
 				if(emptyChests.contains(tileEntity)) {
-					RenderUtils.drawBlockESP(chest.getPos(), 0.25F, 0.25F, 0.25F);
+					RenderUtils.drawBlockESP(chest.getPos(), 0.7F, 0.25F, 0.10F);
 				} else if(nonEmptyChests.contains(tileEntity)) {
 					
 					if(trapped) {
 						RenderUtils.drawBlockESP(chest.getPos(), 0, 1, 0);
 					} else {
-						RenderUtils.drawBlockESP(chest.getPos(), 1, 0F, 0);
+						RenderUtils.drawBlockESP(chest.getPos(), 0.4F, 0F, 0);
 					}
 					
 				} else if(trapped) {
 					RenderUtils.drawBlockESP(chest.getPos(), 0, 1F, 0);
 				} else {
-					RenderUtils.drawBlockESP(chest.getPos(), 1, 0f, 0);
+					RenderUtils.drawBlockESP(chest.getPos(), 0.4F, 0F, 0);
 				}
 				
 				if(trapped) {
 					RenderUtils.drawBlockESP(chest.getPos(), 0, 1F, 0);
 				} else {
-					RenderUtils.drawBlockESP(chest.getPos(), 1, 0F, 0);
+					RenderUtils.drawBlockESP(chest.getPos(), 0.4F, 0F, 0);
 				}
 				
 			} else if(tileEntity instanceof TileEntityEnderChest) {
 				chests++;
 				RenderUtils.drawBlockESP(((TileEntityEnderChest)tileEntity).getPos(), 1, 0, 1);
-			} else {
+			}
+			else if (tileEntity instanceof TileEntityShulkerBox) 
+					{
+				chests++;
+				RenderUtils.drawBlockESP(((TileEntityShulkerBox)tileEntity).getPos(), 0, 1, 0);//Rgb ise yeşil olacak amk
+					}
+			else {
 				if(shouldRenderIronChest) {
 					try {
 						for(String chestClass : chestClasses) {
@@ -127,3 +134,4 @@ public class ChestESP extends Hack{
 		super.onRenderWorldLast(event);
 	}
 }
+
