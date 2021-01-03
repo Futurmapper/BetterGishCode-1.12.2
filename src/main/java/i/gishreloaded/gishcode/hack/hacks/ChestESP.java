@@ -44,7 +44,7 @@ public class ChestESP extends Hack{
 	
 	@Override
     public String getDescription() {
-        return "Tüm depolama araçlarını görmeni sağlar.";
+        return "Allows you to see all of the chests around you..";
     }
 	
 	@Override
