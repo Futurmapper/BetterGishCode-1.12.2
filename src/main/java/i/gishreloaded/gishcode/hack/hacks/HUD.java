@@ -46,10 +46,10 @@ public class HUD extends Hack{
 		//if(Wrapper.INSTANCE.mc().getLanguageManager().getCurrentLanguage() == Wrapper.INSTANCE.mc().getLanguageManager().getLanguage("ru_ru")) {}
 		GL11.glPushMatrix();
 		GL11.glScalef(1.5f, 1.5f, 1.5f);
-		Wrapper.INSTANCE.fontRenderer().drawStringWithShadow(Main.NAME, 4, 4, ClickGui.getColor());
+		Wrapper.INSTANCE.fontRenderer().drawString(Main.NAME, 4, 4, ClickGui.getColor());
 		GL11.glScalef(0.6f, 0.6f, 0.6f);
-		Wrapper.INSTANCE.fontRenderer().drawStringWithShadow(Main.MCVERSION, 84, 4, ClickGui.getColor());
-		Wrapper.INSTANCE.fontRenderer().drawStringWithShadow("v" + Main.VERSION, 84, 14, ClickGui.getColor());
+		Wrapper.INSTANCE.fontRenderer().drawString(Main.MCVERSION, 84, 4, ClickGui.getColor());
+		Wrapper.INSTANCE.fontRenderer().drawString("v" + Main.VERSION, 84, 14, ClickGui.getColor());
 		GL11.glPopMatrix();
 		
 		double x = Wrapper.INSTANCE.player().posX;
@@ -89,13 +89,14 @@ public class HUD extends Hack{
 				}
 			}
 			if(effects.getValue()) {
-				xPos = 6;
-				RenderUtils.drawBorderedRect(xPos - 2, yPos - 2, xPos + Wrapper.INSTANCE.fontRenderer().getStringWidth(hack.getName() + modeName) + 2, yPos + 10, 1, colorRect, ClickGui.getColor());
+				xPos = 10;
+				RenderUtils.drawBorderedRect(xPos - 2, yPos - 2, xPos + Wrapper.INSTANCE.fontRenderer().getStringWidth(hack.getName() + modeName) + 2, yPos + 10, 2,0, ClickGui.getColor());
 			} else {
-				xPos = 4;
+				xPos = 6;
 			}
 			RenderUtils.drawStringWithRect(hack.getName() + modeName, xPos, yPos, ClickGui.getColor(), 
 					colorRect, colorRect2);
+			
 			if(effects.getValue()) {
 				RenderUtils.drawBorderedRect(xPos - 2, yPos - 2, xPos - 6, yPos + 10, 1, ClickGui.getColor(), ClickGui.getColor());
 			}

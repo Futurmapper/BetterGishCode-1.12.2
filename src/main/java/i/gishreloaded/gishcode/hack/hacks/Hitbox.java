@@ -20,13 +20,13 @@ import net.minecraft.entity.item.EntityArmorStand;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 
-public class HitBox extends Hack{
+public class Hitbox extends Hack{
 	
 	public DoubleValue width;
 	public DoubleValue height;
 	
-	public HitBox() {
-		super("HitBox", HackCategory.COMBAT);
+	public Hitbox() {
+		super("Hitbox", HackCategory.COMBAT);
 		
 		this.width = new DoubleValue("Width", 0.6D, 0.1D, 5.0D);
 		this.height = new DoubleValue("Height", 1.8D, 0.1D, 5.0D);

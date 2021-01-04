@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 public class AntiWeb extends Hack{
 	
 	public AntiWeb() {
-		super("AntiWeb", HackCategory.PLAYER);
+		super("AntiWeb", HackCategory.MOVEMENT);
 	}
 	
 	@Override

@@ -13,7 +13,7 @@ public class AntiAfk extends Hack{
 	public TimerUtils timer;
 	
 	public AntiAfk() {
-		super("AntiAfk", HackCategory.ANOTHER);
+		super("AntiAfk", HackCategory.PLAYER);
 		
 		this.timer = new TimerUtils();
 		this.delay = new DoubleValue("DelaySec", 10.0D, 1.0D, 100.0D);

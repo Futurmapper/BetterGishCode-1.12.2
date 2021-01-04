@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 public class Speed extends Hack{
 	
 	public Speed() {
-		super("Speed", HackCategory.PLAYER);
+		super("Speed", HackCategory.MOVEMENT);
 	}
 	
 	@Override

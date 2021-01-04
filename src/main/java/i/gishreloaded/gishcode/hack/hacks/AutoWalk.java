@@ -14,7 +14,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 public class AutoWalk extends Hack{
 	
 	public AutoWalk() {
-		super("AutoWalk", HackCategory.PLAYER);
+		super("AutoWalk", HackCategory.MOVEMENT);
 	}
 	
 	@Override

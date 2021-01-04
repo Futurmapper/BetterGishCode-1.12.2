@@ -16,7 +16,7 @@ public class Rage extends Hack{
 	public IntegerValue delay;
 	
 	public Rage() {
-		super("Rage", HackCategory.PLAYER);
+		super("Rage", HackCategory.ANOTHER);
 		
 		this.timer = new TimerUtils();
 		delay = new IntegerValue("Delay", 0, 0, 1000);

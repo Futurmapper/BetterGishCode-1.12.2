@@ -3,10 +3,10 @@ package i.gishreloaded.gishcode.hack.hacks;
 import i.gishreloaded.gishcode.hack.Hack;
 import i.gishreloaded.gishcode.hack.HackCategory;
 
-public class NoGuiEvents extends Hack{
+public class NoGUIEvents extends Hack{
 
-	public NoGuiEvents() {
-		super("NoGuiEvents", HackCategory.ANOTHER);
+	public NoGUIEvents() {
+		super("NoGUIEvents", HackCategory.ANOTHER);
 	}
 	
 	@Override

@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 public class AntiFall extends Hack{
 
 	public AntiFall() {
-		super("AntiFall", HackCategory.PLAYER);
+		super("Nofall", HackCategory.MOVEMENT);
 	}
 	
 	@Override

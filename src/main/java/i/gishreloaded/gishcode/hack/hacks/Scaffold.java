@@ -46,7 +46,7 @@ public class Scaffold extends Hack{
 	
 	  
 	public Scaffold() {
-		super("Scaffold", HackCategory.PLAYER);
+		super("Scaffold", HackCategory.MOVEMENT);
 		
 		this.mode = new ModeValue("Mode", new Mode("AAC", false), new Mode("Simple", true));
 		

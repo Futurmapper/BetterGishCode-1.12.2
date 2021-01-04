@@ -14,12 +14,12 @@ public class AutoSwim extends Hack{
 
 	public ModeValue mode;
 	public AutoSwim() {
-		super("AutoSwim", HackCategory.PLAYER);
+		super("AutoSwim", HackCategory.MOVEMENT);
 		
 		this.mode = new ModeValue("Mode", new Mode("Jump", true), new Mode("Dolphin", false), new Mode("Fish", false));
 		this.addValue(mode);
 	}
-	
+
 	@Override
     public String getDescription() {
         return "Jumps automatically when you in water.";

@@ -44,7 +44,7 @@ public class ChestESP extends Hack{
 	
 	@Override
     public String getDescription() {
-        return "Allows you to see all of the chests around you..";
+        return "Allows you to see all of the chests around you.";
     }
 	
 	@Override

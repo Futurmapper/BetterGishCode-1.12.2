@@ -36,7 +36,7 @@ public class AutoArmor extends Hack{
 	private int timer;
 	
 	public AutoArmor() {
-		super("AutoArmor", HackCategory.PLAYER);
+		super("AutoArmor", HackCategory.COMBAT);
 		
 		useEnchantments = new BooleanValue("Enchantments", true);
 		swapWhileMoving = new BooleanValue("SwapWhileMoving", false);

@@ -27,7 +27,7 @@ public class Glide extends Hack{
 	TimerUtils timer;
 	
 	public Glide() {
-		super("Glide", HackCategory.PLAYER);
+		super("Glide", HackCategory.MOVEMENT);
 		
 		damage = new BooleanValue("SelfDamage", false);
 		this.mode = new ModeValue("Mode", new Mode("Falling", true), new Mode("Flat", false));

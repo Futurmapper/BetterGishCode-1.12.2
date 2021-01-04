@@ -14,12 +14,12 @@ public class Blink extends Hack{
 	public Entity301 entity301 = null;
 	
 	public Blink() {
-		super("Blink", HackCategory.PLAYER);
+		super("Blink", HackCategory.MOVEMENT);
 	}
 	
 	@Override
     public String getDescription() {
-        return "Allows you to move without sending it to the server.";
+        return "Allows you to move without sending it to the server..";
     }
 
 	@Override

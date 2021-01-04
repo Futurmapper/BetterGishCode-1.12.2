@@ -32,7 +32,7 @@ public class ChestStealer extends Hack{
 	
 	@Override
     public String getDescription() {
-        return "Steals all stuff from chest.";
+        return "Allows you to see all of the chests around you.";
     }
 	
 	@Override

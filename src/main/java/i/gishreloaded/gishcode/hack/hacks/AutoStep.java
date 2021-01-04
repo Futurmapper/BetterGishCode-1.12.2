@@ -17,7 +17,7 @@ public class AutoStep extends Hack{
 	public int ticks = 0;
 	
 	public AutoStep() {
-		super("AutoStep", HackCategory.PLAYER);
+		super("AutoStep", HackCategory.MOVEMENT);
 		
 		this.mode = new ModeValue("Mode", new Mode("Simple", true), new Mode("AAC", false));
 		height = new DoubleValue("Height", 0.5D, 0D, 10D);

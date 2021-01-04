@@ -40,7 +40,7 @@ public class ClickGui extends Hack{
 		
 		this.tooltip = new BooleanValue("Tooltip", true);
 		this.shadow = new BooleanValue("Shadow", true);
-		this.rainbow = new BooleanValue("Rainbow", true);
+		this.rainbow = new BooleanValue("Rainbow", false);
 		this.red = new IntegerValue("Red", 255, 0, 255);
 		this.green = new IntegerValue("Green", 255, 0, 255);
 		this.blue = new IntegerValue("Blue", 255, 0, 255);
@@ -52,11 +52,11 @@ public class ClickGui extends Hack{
 	
 	@Override
 	public String getDescription() {
-		return "Graphical user interface.";
+		return "Graphical user interface";
 	}
 	
 	 public static int getColor() {
-		 return rainbow.getValue() ? ColorUtils.rainbow().getRGB() : color;
+		 return rainbow.getValue() ? ColorUtils.getColor(255, 0,0) : color;
 	 }
 	
 	 public static void setColor() {

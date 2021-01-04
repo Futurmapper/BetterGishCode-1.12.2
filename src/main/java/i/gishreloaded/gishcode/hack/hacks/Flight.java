@@ -19,7 +19,7 @@ public class Flight extends Hack{
 	public ModeValue mode;
 	int ticks = 0;
 	public Flight() {
-		super("Flight", HackCategory.PLAYER);
+		super("Flight", HackCategory.MOVEMENT);
 		
 		this.mode = new ModeValue("Mode", new Mode("Simple", true), new Mode("Dynamic", false), new Mode("Hypixel", false));
 		
@@ -28,7 +28,7 @@ public class Flight extends Hack{
 	
 	@Override
 	public String getDescription() {
-		return "Allows you to you fly.";
+		return "Allows you to you fly";
 	}
 	
 	@Override

@@ -18,7 +18,7 @@ public class GhostMode extends Hack{
 	public static boolean enabled = false;
 	
 	public GhostMode() {
-		super("GhostMode", HackCategory.ANOTHER);
+		super("PanicMode", HackCategory.ANOTHER);
 	}
 	
 	@Override

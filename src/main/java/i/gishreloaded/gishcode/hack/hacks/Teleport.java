@@ -61,7 +61,7 @@ public class Teleport extends Hack{
     float reach = 0;
     
 	public Teleport() {
-		super("Teleport", HackCategory.PLAYER);
+		super("Teleport", HackCategory.MOVEMENT);
 		
 		this.mode = new ModeValue("Mode", new Mode("Reach", true), new Mode("Flight", false));
 		this.math = new BooleanValue("Math", false);

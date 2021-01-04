@@ -13,12 +13,12 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 public class Spider extends Hack{
 	
 	public Spider() {
-		super("Spider", HackCategory.PLAYER);
+		super("Spider", HackCategory.MOVEMENT);
 	}
 	
 	@Override
 	public String getDescription() {
-		return "Allows you to climb up walls like a spider.";
+		return "Allows you to climb up walls like a spider";
 	}
 	
 	@Override

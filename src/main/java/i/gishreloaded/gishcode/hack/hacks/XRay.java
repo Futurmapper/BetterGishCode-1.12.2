@@ -18,7 +18,8 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 
 public class XRay extends Hack{
 
-    public IntegerValue distance;
+	//TODO : Change with a normal xray
+	public IntegerValue distance;
 	public IntegerValue delay;
 
 	public TimerUtils timer;

@@ -16,7 +16,7 @@ public class AntiSneak extends Hack{
 	
 	public BooleanValue fullSprint;
 	public AntiSneak() {
-		super("AntiSneak", HackCategory.PLAYER);
+		super("AntiSneak", HackCategory.MOVEMENT);
 		fullSprint = new BooleanValue("FullSprint", true);
 		this.addValue(fullSprint);
 	}

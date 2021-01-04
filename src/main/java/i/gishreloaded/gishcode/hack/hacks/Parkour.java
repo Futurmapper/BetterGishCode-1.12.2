@@ -23,7 +23,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 public class Parkour extends Hack{
 	
 	public Parkour() {
-		super("Parkour", HackCategory.PLAYER);
+		super("Parkour", HackCategory.MOVEMENT);
 	}
 	
 	@Override

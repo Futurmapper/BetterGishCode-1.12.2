@@ -16,7 +16,7 @@ public class Ghost extends Hack{
 	public BooleanValue noWalls;
 	
 	public Ghost() {
-		super("Ghost", HackCategory.PLAYER);
+		super("Ghost", HackCategory.MOVEMENT);
 		
 		noWalls = new BooleanValue("NoWalls", true);
 		
